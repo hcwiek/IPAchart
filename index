@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sound Player</title>
+</head>
+
+<body>
+<h1>Sound Player</h1>
+
+<audio id="player" controls autoplay></audio>
+
+<script>
+let path = window.location.pathname.substring(1);
+
+if(path === "") path = "a"; // default sound
+
+document.getElementById("player").src = path + ".mp3";
+</script>
+
+</body>
+</html>
