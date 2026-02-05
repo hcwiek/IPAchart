@@ -10,9 +10,10 @@
 <audio id="player" controls autoplay></audio>
 
 <script>
+let parts = window.location.pathname.split("/");
 let path = window.location.pathname.substring(1);
 
-if(path === "") path = "nasal.mp3"; // default sound
+if(path === "") path = "nasal"; // default sound
 
 document.getElementById("player").src = path + ".mp3";
 </script>
